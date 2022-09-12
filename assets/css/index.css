@@ -1,0 +1,430 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/*......................... BARRE DE NAVIGATION............................... */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    border-bottom: 5px double black;
+}
+
+#logo{
+    height: 115px;
+}
+
+#menu{
+    display: none;
+    width: 100%;
+    font-size: larger;
+    align-items: center;
+    border:5px double rgb(255, 227, 232);
+    margin: 30px 20px;
+    padding:0 60px ;
+}
+
+#menu_liste{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 10px 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: none; 
+}
+
+#burger{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    font-size: 35px;
+}
+
+#btn_burger{
+    cursor: pointer;
+}
+
+#close{
+    width: 100%;
+    display: none;
+    justify-content: right;
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+#btn_close{
+    cursor: pointer;
+}
+
+#menu_container{
+    position: absolute;
+    display: none;
+    margin-top: 119px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#menu2{
+    display: none;
+    background-color: rgb(255, 227, 232);
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 250px;
+    align-items: center;
+    justify-content: space-between; 
+    border-bottom: 5px double black;   
+}
+
+#menu_liste2{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 15px 0;
+}
+
+.ligne{
+
+    width: 70%;
+    background-color: black;
+    border-color: black;
+
+}
+
+.lien_rose:hover{
+    color: rgb(255, 227, 232);
+}
+
+.lien_blanc:hover{
+    color: white;
+}
+
+
+/* 
+@media screen and (min-width:701px) {
+    #menu{
+        display: block;
+    }
+    #burger{
+        display: none;
+    }
+    #menu2{
+        display: none;
+    }
+} */
+
+
+
+/* ............................SLIDER........................... */
+
+#header{
+    height: 250px;
+    background-image: url("fond2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+h1{
+    width: max-content;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(211, 211, 211, 0.345);
+    border-radius: 20px;
+}
+
+#titre2{
+    width: 96%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    position: absolute;
+}
+
+#slider {
+    position: absolute;
+    height: 250px;
+    width: 80%;
+    margin: auto;
+    display: none;
+    align-items: center;
+}
+
+#slide {
+    width: 100%;
+    height: 100%;
+}
+
+#precedent,
+#suivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    font-size: 50px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.533);
+    padding: 10px;
+}
+
+#precedent {
+    left: 0;
+}
+
+#suivant {
+    right: 0;
+}
+
+#slider:hover #precedent,
+#slider:hover #suivant {
+    opacity: 1;
+}
+
+
+/* ...............................CARDS............................................. */
+
+main{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 30px;
+    text-align: center;
+  }
+
+  .descriptif{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+/* ............................FORMULAIRE DE CONTACT...................... */
+input,textarea{
+    border-radius: 5px;
+}
+
+#btn_envoyer{
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+button{
+    width: 100px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#containerformulaire{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+#formulaire{
+    width: 80%;
+    display: grid;
+    grid-template-columns:2fr 3fr;
+    grid-template-rows: min-content;
+    padding: 20px;
+    row-gap: 20px;
+    background-color: rgb(255, 227, 232);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.332);
+    
+}
+
+.nom{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.inputnom{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.prenom{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.inputprenom{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.tel{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.inputtel{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.mail{
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.inputmail{
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.message{
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.inputmessage{
+    grid-column: 2;
+    grid-row: 5;
+}
+
+/* .............................FOOTER................................ */
+    footer{
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    border-top: #000 5px double;
+    background-color:rgba(211, 211, 211, 0.345);
+}
+
+@media screen and (min-width:701px) {
+    #header{
+        background-image: none;
+        align-items: baseline;
+        background-color: rgb(255, 227, 232);
+    }
+    h1{
+        display: none;
+        background-color: rgba(240, 248, 255, 0);
+    }
+    #slider{
+        display: flex;
+    }
+
+    main{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #formulaire{
+        width: 60%;
+        grid-template-columns:1fr 3fr 1fr 1fr 3fr;
+    }
+
+    .nom{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .inputnom{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .prenom{
+        grid-column: 4;
+        grid-row: 1;
+    }
+    
+    .inputprenom{
+        grid-column: 5;
+        grid-row: 1;
+    }
+    
+    .tel{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .inputtel{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .mail{
+        grid-column: 4;
+        grid-row: 2;
+    }
+    
+    .inputmail{
+        grid-column: 5;
+        grid-row: 2;
+    }
+    
+    .message{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .inputmessage{
+        grid-column: 2 / 7;
+        grid-row: 3;
+    }
+
+    #btn_envoyer{
+        grid-column: 1/7;
+    }
